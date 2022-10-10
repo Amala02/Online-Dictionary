@@ -16,14 +16,14 @@ import json
 root = Tk()
 root.geometry('600x600')
 root.resizable(0,0)
-root.config(bg= '#73cef0')
+root.config(bg= '#25397a')
 root.title('Text_to_speech')
 
 
 Label(root, text= 'TEXT-TO-SPEECH', font = 'Poppins 20 italic',  foreground="white", background="black", width= '20').pack(side='top')
 Msg= StringVar()
-Label(root, text= "enter the text here", font = 'Open-sans 15 italic underline').place(x=20, y=60)
-searchbar= Entry(root, textvariable= 'Msg', width='50')
+Label(root, text= "enter the text here", font = 'Open-sans 15 italic underline', foreground="white", background="black").place(x=20, y=60)
+searchbar= Entry(root, textvariable= 'Msg',  width='50')
 searchbar.place(x=20, y=100)
 
 
@@ -56,8 +56,8 @@ def Exit():
 def Reset():
     Msg.set("")
 
-Button(root, text= "Hear", font = 'arial 15 bold', command=Text_To_Speech, width =4).place(x=25, y=140)
-Button(root, text= "Exit", font= 'arial 15 bold',  command= Exit, width= 4).place(x=100, y=140)
-Button(root, text= "Reset", font = 'arial 15 bold', command=Reset, width =4).place(x=175, y=140)
-Button(root, text="Definition", font ='arial 15 bold', command= define, width =10).place(x=25, y= 200)
+Button(root, text= "Hear", font = 'poppins 15 ', command=Text_To_Speech, foreground="white", background="#273154",width =4).place(x=25, y=140)
+Button(root, text= "Exit", font= 'Open-sans 15  ',  command= Exit, foreground="white", background="#273154", width= 4).place(x=100, y=140)
+Button(root, text= "Reset", font = 'Open-sans 15 ', command=Reset, foreground="white", background="#273154",width =4).place(x=175, y=140)
+Button(root, text="Definition", font ='Open-sans 15 ', command= define, foreground="white", background="#273154",width =10).place(x=25, y= 200)
 root.mainloop()
